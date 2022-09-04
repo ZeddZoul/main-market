@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MainMarket - Modern Business Deals</title>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="shortcut icon" href="./assets/images/new-favi-7.png" type="image/x-icon">
   </head>
   <body id="top">
     <nav>
       <img src="./assets/images/new-favi-7.png" alt="logo.png" />
-      <div>
-        <a href="#">Home</a>
-        <a href="#">Community</a
-        ><a href="#">Regarding us</a>
-        <a href="#">Career</a>
-    
-      </div>
+  <div  class="menuContainer">
+    <div id="menu" class="hide">
+      <p id="close">X</p>
+      <a href="#">Home</a>
+      <a href="#">Community</a>
+      <a href="#">Regarding us</a>
+      <a href="#">Career</a>
+      <a id="app" href="#">Get Our App</a>
+  
+    </div>
+  </div>
       <a href="#">Get App</a>
-      <i class="fa-solid fa-bars"></i>
+      <p id="menuBtn">&#9776; Menu</p>
     </nav>
     <main>
       <!-- Over the fold -->
@@ -226,4 +231,47 @@
       </a>
     </main>
   </body>
+  <script>
+    const menu = document.getElementById("menu")
+    const menuBtn = document.getElementById("menuBtn")
+    const closeBtn = document.getElementById("close")
+    const Screen = document.querySelector(".menuContainer")
+
+    window.onresize = _ => {
+console.log(window.innerWidth)
+      if(window.innerWidth >935){
+        Screen.style.display = "block"
+      }
+    else{
+        Screen.style.display = "none"
+      }
+    }
+    
+    menuBtn.onclick = _ => {
+      menu.classList.remove("hide")
+      menu.classList.add("showMenu")
+      Screen.style.display = "block"
+      document.body.style.overflow = "hidden"
+    }
+
+
+    closeBtn.onclick = _ => {
+      menu.classList.add("hide")
+      menu.classList.remove("showMenu")
+      Screen.style.display = "none"
+      document.body.style.overflow = "auto"
+    }
+
+
+
+    Screen.onclick = _ => {
+      menu.classList.add("hide")
+      menu.classList.remove("showMenu")
+      Screen.style.display = "none"
+      document.body.style.overflow = "auto"
+    
+
+    }
+
+  </script>
 </html>
