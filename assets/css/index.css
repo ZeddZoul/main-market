@@ -454,8 +454,7 @@ footer .socials span {
   gap: 10px;
   display: flex;
 }
-
-.up {
+main >a {
   position: fixed;
   width: max-content;
   color: white;
@@ -465,6 +464,15 @@ footer .socials span {
   bottom: 10px;
   right: 20px;
   box-shadow: 1px 2px 10px rgb(171, 171, 245);
+  transform:scale(0);
+  opacity: 0;
+  visibility: hidden;
+}
+main > .up{
+  transition: all .4s ease-in-out;
+    transform:scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 930px) {

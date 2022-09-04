@@ -226,7 +226,7 @@
              <li>mainmarket_inc</li>
            </div>
       </footer>
-      <a href="#top" class="up">
+      <a href="#top" id="up">
         &uarr;
       </a>
     </main>
@@ -236,9 +236,9 @@
     const menuBtn = document.getElementById("menuBtn")
     const closeBtn = document.getElementById("close")
     const Screen = document.querySelector(".menuContainer")
+    const topBtn = document.querySelector("#up")
 
     window.onresize = _ => {
-console.log(window.innerWidth)
       if(window.innerWidth >935){
         Screen.style.display = "block"
       }
@@ -246,7 +246,15 @@ console.log(window.innerWidth)
         Screen.style.display = "none"
       }
     }
-    
+    document.body.onscroll = _ => {
+      let x = window.pageYOffset
+      if( x > 600){
+topBtn.classList.add("up")
+} else{
+        topBtn.classList.remove("up")
+
+      }
+    }
     menuBtn.onclick = _ => {
       menu.classList.remove("hide")
       menu.classList.add("showMenu")
