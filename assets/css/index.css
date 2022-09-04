@@ -351,6 +351,14 @@ main .intro .text span a:last-child {
   height: 18vw;
   min-height: 180px;
 }
+.money a{
+  padding: 10px;
+  background-color: #101f52;
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 30px 0px;
+}
 
 .trusted {
   background-color: #ececee;
@@ -477,5 +485,46 @@ margin: auto;
   .cowries > img {
  display: none;
   }
+  .virtual img{
+    display: none;
+  }
+  .network-state {
+flex-direction: column ;
+  }
+  .network-state div {
+    width: 90vw;
+  }
+  .whats-happening div{
+    flex-direction: column;
+  }
+  .whats-happening .video {
+    background-color: grey;
+    width: 90%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .scrollbar .btn{
+    display: none;
+  }
+
+  .right{
+    display: none;
+  }
+  main .intro .text {
+    width: 100%;
+    max-width: none;
+    margin: auto;
+  }
+main .intro .text span {
+justify-content:unset
+
+}
+.intro > a{
+display: none;
+}
 }
 
